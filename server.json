@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jinhsueh/maacgo-email-mcp",
+  "title": "MAAC Go Email",
+  "description": "Send email, run campaigns, manage contacts and read delivery reports from any MCP client.",
+  "websiteUrl": "https://edm.cresclab.com/mcp",
+  "repository": {
+    "url": "https://github.com/jinhsueh/maacgo-email-mcp",
+    "source": "github"
+  },
+  "version": "0.3.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@maacgo/email-mcp",
+      "version": "0.3.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MAACGO_EMAIL_API_KEY",
+          "description": "API key from https://edm.cresclab.com/developers",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://edm.cresclab.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your API key as a Bearer token. sk_test_ keys record sends without delivering; sk_live_ keys deliver. Get one at https://edm.cresclab.com/developers",
+          "value": "Bearer {api_key}",
+          "isRequired": true,
+          "isSecret": true,
+          "variables": {
+            "api_key": {
+              "description": "MAAC Go Email API key (sk_test_... or sk_live_...)",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

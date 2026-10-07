@@ -1,0 +1,46 @@
+{
+  "name": "@maacgo/email-mcp",
+  "version": "0.3.0",
+  "mcpName": "io.github.jinhsueh/maacgo-email-mcp",
+  "description": "MCP server for MAAC Go Email — send transactional email, run campaigns and read delivery reports from Claude Code, Codex, Cursor or Windsurf. Free to start.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "email",
+    "email-api",
+    "transactional-email",
+    "newsletter",
+    "maacgo",
+    "agent",
+    "claude-code",
+    "cursor",
+    "codex"
+  ],
+  "homepage": "https://edm.cresclab.com/mcp",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "maacgo-email-mcp": "bin/maacgo-email-mcp.js"
+  },
+  "files": [
+    "bin/",
+    "tools.js",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhsueh/maacgo-email-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinhsueh/maacgo-email-mcp/issues"
+  }
+}
