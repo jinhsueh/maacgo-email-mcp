@@ -58,10 +58,10 @@ env = { MAACGO_AUTH = "Bearer sk_test_..." }
 **ChatGPT and claude.ai web connectors** are not supported yet: they need
 OAuth, and this server takes an API key.
 
-## stdio — this package
+## stdio — this package (coming)
 
-`@maacgo/email-mcp` runs the same 22 tools locally over stdio, for clients
-that prefer a local process (needs Node 18+):
+`@maacgo/email-mcp` is **not published to npm yet**; use the HTTP server
+above. Once it is, it will run the same tools locally:
 
 ```json
 {"mcpServers":{"maacgo-email":{"command":"npx","args":["-y","@maacgo/email-mcp"],"env":{"MAACGO_EMAIL_API_KEY":"sk_test_..."}}}}
